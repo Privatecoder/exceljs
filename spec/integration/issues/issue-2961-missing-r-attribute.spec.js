@@ -16,6 +16,9 @@ describe('github issues', () => {
         expect(sheet.getCell('A2').text).to.equal('1');
         expect(sheet.getCell('B2').text).to.equal('IM20220302624042440003');
         expect(sheet.getCell('C2').text).to.equal('lp002');
+
+        const sheet2 = wb.getWorksheet(2);
+        expect(sheet2.getCell('A1').text).to.match(/^SELECT/);
       });
   });
 });
